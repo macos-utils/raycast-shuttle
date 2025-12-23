@@ -28,7 +28,7 @@ function processItem(path, item) {
             'cmd': item.cmd,
             'path': path,
             'comment': item.cmd.substring(item.cmd.indexOf('#') + 1).trim(),
-            'ip': item.cmd.match(/@([\.\w\d]+)?/)[1],
+            'ip': item.cmd.match(/@(\S*)/)[1],
             'user': item.cmd.match(/\s([\w\d]+)@/)[1]
         })
 
